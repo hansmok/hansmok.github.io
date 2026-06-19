@@ -10,12 +10,12 @@ export const profile = {
   email: "mok_hans@yahoo.com",
   publicEmail: "me@hansmok.com",
   bio:
-    "Senior software engineer at Raylu, previously at Google and American Express, focused on product engineering, platform migrations, integrations, and practical AI tooling.",
+    "Senior software engineer at Raylu. Previously at Google and American Express. Focused on product and platform infrastructure, integrations, and practical AI systems.",
   about: [
     "My name is Hans Mok. I was born and raised in New York City and studied Software Engineering at Stevens Institute of Technology.",
-    "I am currently a senior software engineer at Raylu, and previously worked at Google and American Express.",
-    "My primary areas of focus are building scalable distributed systems, resilient platforms, and infrastructure that can support real product usage over time.",
-    "Outside of programming, I make time for basketball, pool, and travel.",
+    "I am currently a senior software engineer at Raylu and was previously at Google and American Express.",
+    "My primary areas of focus are building scalable distributed systems, resilient platforms, and performant infrastructure.",
+    "Outside of programming, I make time for basketball, pool, and travel with friends and family.",
   ],
   interests: [
     "agentic systems",
