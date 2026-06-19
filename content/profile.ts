@@ -30,6 +30,6 @@ export const commandLinks = [
   { command: "about", label: "about", href: "/about", external: false },
   { command: "resume", label: "resume", href: "/resume", external: false },
   { command: "works", label: "works", href: "/works", external: false },
+  { command: "dotfiles", label: "dotfiles", href: profile.dotfiles, external: true }, 
   { command: "contact", label: "contact", href: "/contact", external: false },
-  { command: "dotfiles", label: "dotfiles", href: profile.dotfiles, external: true },
 ] as const;
