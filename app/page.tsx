@@ -1,11 +1,5 @@
-import { CommandConsole } from "@/components/CommandConsole";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main className="home-shell">
-      <div className="home-layout">
-        <CommandConsole />
-      </div>
-    </main>
-  );
+  redirect("/about");
 }

@@ -1,29 +1,18 @@
 import { ReactNode } from "react";
-import { CommandConsole } from "@/components/CommandConsole";
+import { SiteHeader } from "@/components/SiteHeader";
 
 type PageShellProps = {
-  command: string;
-  title?: string;
-  subtitle?: string;
-  terminalTitle?: string;
+  eyebrow?: string;
   children: ReactNode;
 };
 
-export function PageShell({
-  command,
-  title,
-  subtitle,
-  terminalTitle,
-  children,
-}: PageShellProps) {
+export function PageShell({ eyebrow, children }: PageShellProps) {
   return (
     <main className="site-shell">
-      <CommandConsole compact context={command} />
+      <SiteHeader />
 
       <section className="page-heading">
-        <p className="eyebrow">{terminalTitle ?? `~/${command}`}</p>
-        {title ? <h1>{title}</h1> : null}
-        {subtitle ? <p>{subtitle}</p> : null}
+        {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
       </section>
 
       {children}

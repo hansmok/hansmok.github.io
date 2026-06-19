@@ -4,10 +4,7 @@ import { education, experience, skills } from "@/content/resume";
 
 export default function ResumePage() {
   return (
-    <PageShell
-      command="resume"
-      terminalTitle="cat ~/resume.md"
-    >
+    <PageShell eyebrow="resume">
       <ResumeSection title="Experience">
         <div className="timeline">
           {experience.map((item) => (

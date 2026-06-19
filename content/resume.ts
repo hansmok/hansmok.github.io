@@ -2,11 +2,11 @@ export const experience = [
   {
     company: "Raylu",
     location: "New York, NY",
-    role: "Senior Software Engineer",
+    role: "Software Engineer",
     dates: "Jun 2026 - Present",
     stack: ["TypeScript", "agentic tooling", "LLMs"],
     bullets: [
-      "Building the next generation of agentic deal sourcing.",
+      "Building the future of deal sourcing with agentic systems.",
       "Leading migration work toward model-agnostic LLM architecture.",
       "Leading migration of raw data into accessible data models.",
     ],

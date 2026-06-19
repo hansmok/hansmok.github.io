@@ -1,10 +1,9 @@
 export const profile = {
   name: "Hans Mok",
   handle: "hans",
-  prompt: "hans@nyc λ",
   role: "Senior Software Engineer",
   company: "Raylu",
-  location: "New York City",
+  location: "NYC",
   previous: ["Google", "American Express"],
   dotfiles: "https://github.com/hansmok/dotfiles",
   email: "mok_hans@yahoo.com",
@@ -12,9 +11,9 @@ export const profile = {
   bio:
     "Senior software engineer at Raylu. Previously at Google and American Express. Focused on product and platform infrastructure, integrations, and practical AI systems.",
   about: [
-    "My name is Hans Mok. I was born and raised in New York City and studied Software Engineering at Stevens Institute of Technology.",
+    "I’m Hans Mok, a software engineer from New York City with a Bachelor's in Software Engineering from Stevens Institute of Technology.",
     "I am currently a senior software engineer at Raylu and was previously at Google and American Express.",
-    "My primary areas of focus are building scalable distributed systems, resilient platforms, and performant infrastructure.",
+    "My primary areas of interest are building scalable systems, resilient platforms, and performant infrastructure.",
     "Outside of programming, I make time for basketball, pool, and travel with friends and family.",
   ],
   interests: [
@@ -25,11 +24,12 @@ export const profile = {
   ],
 } as const;
 
-export const commandLinks = [
-  { command: "main", label: "main", href: "/", external: false },
-  { command: "about", label: "about", href: "/about", external: false },
-  { command: "resume", label: "resume", href: "/resume", external: false },
-  { command: "works", label: "works", href: "/works", external: false },
-  { command: "dotfiles", label: "dotfiles", href: profile.dotfiles, external: true }, 
-  { command: "contact", label: "contact", href: "/contact", external: false },
+export const siteLinks = [
+  { label: "about", href: "/about", external: false },
+  { label: "resume", href: "/resume", external: false },
+  { label: "works", href: "/works", external: false },
+  { label: "dotfiles", href: profile.dotfiles, external: true },
+  { label: "contact", href: "/contact", external: false },
 ] as const;
+
+export const commandLinks = siteLinks;
