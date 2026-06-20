@@ -9,7 +9,7 @@ export const profile = {
   email: "mok_hans@yahoo.com",
   publicEmail: "me@hansmok.com",
   bio:
-    "Senior software engineer at Raylu. Previously at Google and American Express. Focused on product and platform infrastructure, integrations, and practical AI systems.",
+    "What's this all about?",
   about: [
     "I’m Hans Mok, a software engineer from New York City with a Bachelor's in Software Engineering from Stevens Institute of Technology.",
     "I am currently a senior software engineer at Raylu and was previously at Google and American Express.",

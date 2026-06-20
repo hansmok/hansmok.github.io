@@ -5,6 +5,10 @@ import { profile } from "@/content/profile";
 export const metadata: Metadata = {
   title: `${profile.name} | ${profile.role}`,
   description: profile.bio,
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
