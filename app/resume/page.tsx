@@ -1,6 +1,13 @@
 import { PageShell } from "@/components/PageShell";
 import { ResumeSection } from "@/components/ResumeSection";
 import { education, experience, skills } from "@/content/resume";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/resume",
+  },
+};
 
 export default function ResumePage() {
   return (

@@ -1,6 +1,13 @@
 import { PageShell } from "@/components/PageShell";
 import { WorkFrame } from "@/components/WorkFrame";
 import { works } from "@/content/works";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/works",
+  },
+};
 
 export default function WorksPage() {
   return (
