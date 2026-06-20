@@ -18,6 +18,7 @@
 
 html {
   background: var(--bg);
+  color-scheme: dark;
 }
 
 body {
@@ -86,11 +87,11 @@ button {
 }
 
 .site-header {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 10px 0 18px;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0 18px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -116,7 +117,7 @@ button {
 }
 
 .site-brand-route {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .site-brand-lambda {
@@ -185,17 +186,48 @@ h1 {
 }
 
 .site-nav-select {
-  justify-self: end;
+  position: relative;
   width: 100%;
+  max-width: 280px;
+  margin-left: auto;
+}
+
+.site-nav-select::after {
+  content: "▾";
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: var(--accent);
+  pointer-events: none;
 }
 
 .site-nav-select select {
   width: 100%;
-  border: 1px solid var(--line);
-  background: var(--panel-strong);
-  color: var(--text);
-  padding: 10px 12px;
+  border: 1px solid var(--accent);
+  background: var(--bg);
+  background-color: var(--bg);
+  color: var(--accent);
+  padding: 10px 36px 10px 12px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   outline: none;
+  cursor: pointer;
+}
+
+.site-nav-select select:hover {
+  background: rgba(40, 240, 198, 0.06);
+  background-color: rgba(40, 240, 198, 0.06);
+}
+
+.site-nav-select select:focus-visible {
+  box-shadow: 0 0 0 2px rgba(40, 240, 198, 0.22);
+}
+
+.site-nav-select option {
+  background: var(--bg);
+  color: var(--accent);
 }
 
 .education-grid,
@@ -403,12 +435,15 @@ h1 {
   }
 
   .site-header {
-    grid-template-columns: 1fr;
+    gap: 12px;
     padding-bottom: 14px;
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .site-nav-select {
-    justify-self: stretch;
+    max-width: none;
+    margin-left: 0;
   }
 
   .site-nav-select select {
