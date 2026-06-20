@@ -12,6 +12,7 @@ export default function ContactPage() {
   return (
     <PageShell>
       <section className="content-panel contact-block">
+        <p className="eyebrow">contact.txt</p>
         <ContactForm />
       </section>
     </PageShell>

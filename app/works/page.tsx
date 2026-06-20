@@ -12,6 +12,9 @@ export const metadata: Metadata = {
 export default function WorksPage() {
   return (
     <PageShell>
+      <section className="content-panel works-label-panel">
+        <p className="eyebrow">selected-works.md</p>
+      </section>
       <section className="works-grid">
         {works.map((work) => (
           <WorkFrame key={work.title} {...work} />

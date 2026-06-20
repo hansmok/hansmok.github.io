@@ -312,18 +312,15 @@ h1 {
   padding: 8px 10px;
 }
 
-.resume-section h2 {
-  margin-bottom: 22px;
-  color: var(--accent);
-  font-size: 1rem;
-  font-weight: 500;
-}
-
 .content-panel .eyebrow {
   margin-bottom: 12px;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.resume-section .eyebrow {
+  margin-bottom: 18px;
 }
 
 .timeline {
@@ -414,6 +411,15 @@ h1 {
 .frame-link {
   margin-top: auto;
   color: var(--accent);
+}
+
+.works-label-panel {
+  margin-bottom: 14px;
+  padding: 16px 24px;
+}
+
+.contact-block .eyebrow {
+  margin-bottom: 18px;
 }
 
 @media (max-width: 780px) {

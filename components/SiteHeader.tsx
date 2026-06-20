@@ -14,8 +14,14 @@ export function SiteHeader() {
   const pathname = usePathname();
   const activePath = normalizePathname(pathname);
   const router = useRouter();
-  const activeLink = siteLinks.find((item) => item.href === activePath);
-  const activeLabel = activeLink?.label ?? "about";
+  const activeLabelMap: Record<string, string> = {
+    "/about": "profile.txt",
+    "/resume": "experience.md",
+    "/works": "selected-works.md",
+    "/contact": "contact.txt",
+    "/": "profile.txt",
+  };
+  const activeLabel = activeLabelMap[activePath] ?? "profile.txt";
 
   function handleChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextHref = event.target.value;

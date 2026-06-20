@@ -1,12 +1,12 @@
 type ResumeSectionProps = {
-  title: string;
+  label: string;
   children: React.ReactNode;
 };
 
-export function ResumeSection({ title, children }: ResumeSectionProps) {
+export function ResumeSection({ label, children }: ResumeSectionProps) {
   return (
     <section className="resume-section">
-      <h2>{title}</h2>
+      <p className="eyebrow">{label}</p>
       {children}
     </section>
   );

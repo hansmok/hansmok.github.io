@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <PageShell>
-      <ResumeSection title="Experience">
+      <ResumeSection label="experience.md">
         <div className="timeline">
           {experience.map((item) => (
             <article className="timeline-item" key={`${item.company}-${item.role}`}>
@@ -36,7 +36,7 @@ export default function ResumePage() {
         </div>
       </ResumeSection>
 
-      <ResumeSection title="Education">
+      <ResumeSection label="education.md">
         <div className="education-grid">
           {education.map((item) => (
             <article key={item.school}>
@@ -52,7 +52,7 @@ export default function ResumePage() {
         </div>
       </ResumeSection>
 
-      <ResumeSection title="Technical Skills">
+      <ResumeSection label="skills.md">
         <ul className="tag-list">
           {skills.map((skill) => (
             <li key={skill}>{skill}</li>
