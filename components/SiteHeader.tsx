@@ -7,8 +7,14 @@ import { profile, siteLinks } from "@/content/profile";
 
 const primaryLinks = siteLinks;
 
+function normalizePathname(pathname: string) {
+  if (pathname === "/") return pathname;
+  return pathname.replace(/\/$/, "");
+}
+
 export function SiteHeader() {
   const pathname = usePathname();
+  const activePath = normalizePathname(pathname);
   const router = useRouter();
 
   function handleChange(event: ChangeEvent<HTMLSelectElement>) {
@@ -37,7 +43,7 @@ export function SiteHeader() {
         {primaryLinks.map((item) => (
           <Link
             key={item.href}
-            className={pathname === item.href ? "is-active" : ""}
+            className={activePath === item.href ? "is-active" : ""}
             href={item.href}
           >
             {item.label}
@@ -47,7 +53,7 @@ export function SiteHeader() {
 
       <label className="site-nav-select" aria-label="Navigate to page">
         <span className="sr-only">Navigate</span>
-        <select value={pathname} onChange={handleChange}>
+        <select value={activePath} onChange={handleChange}>
           {primaryLinks.map((item) => (
             <option key={item.href} value={item.href}>
               {item.label}
