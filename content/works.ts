@@ -1,6 +1,14 @@
 export const works = [
   {
     source: "9to5Google",
+    title: "YouTube Music Now Playing controls update",
+    year: "2024",
+    summary:
+      "Coverage of the YouTube Music \"Now playing\" controls update.",
+    href: "https://9to5google.com/2024/11/20/youtube-music-now-playing-controls/",
+  },
+  {
+    source: "9to5Google",
     title: "YouTube Music adds Speed Dial pinning",
     year: "2024",
     summary:
