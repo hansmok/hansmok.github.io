@@ -3,7 +3,7 @@ import "./globals.css";
 import { profile } from "@/content/profile";
 
 export const metadata: Metadata = {
-  title: `${profile.name} | ${profile.role}`,
+  title: "who dis?",
   description: profile.bio,
   robots: {
     index: false,
