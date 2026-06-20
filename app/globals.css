@@ -117,7 +117,7 @@ button {
 }
 
 .site-brand-route {
-  color: var(--accent);
+  color: var(--text);
 }
 
 .site-brand-lambda {
@@ -255,8 +255,17 @@ h1 {
 }
 
 .contact-block {
-  width: min(100%, 760px);
-  margin: 0 auto 16px;
+  width: 100%;
+}
+
+.about-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.about-divider {
+  height: 1px;
+  background: var(--line);
 }
 
 .contact-form {
@@ -417,10 +426,6 @@ h1 {
 .frame-link {
   margin-top: auto;
   color: var(--accent);
-}
-
-.contact-block .eyebrow {
-  margin-bottom: 18px;
 }
 
 @media (max-width: 780px) {

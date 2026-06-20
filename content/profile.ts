@@ -12,15 +12,15 @@ export const profile = {
     "What's this all about?",
   about: [
     "I’m Hans Mok, a software engineer from New York City with a Bachelor's in Software Engineering from Stevens Institute of Technology.",
-    "I am currently a senior software engineer at Raylu and was previously at Google and American Express.",
-    "My primary areas of interest are building scalable systems, resilient platforms, and performant infrastructure.",
+    "I am currently a senior software engineer at Raylu and previously worked at Google and American Express.",
+    "My primary areas of interest are building scalable systems, platforms, and core infrastructure.",
     "Outside of programming, I make time for basketball, pool, and travel with friends and family.",
   ],
   interests: [
     "agentic systems",
     "product engineering",
     "platform engineering",
-    "api infrastructure",
+    "core infrastructure",
   ],
 } as const;
 

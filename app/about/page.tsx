@@ -11,7 +11,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <PageShell>
-      <AboutContent />
+      <section className="resume-section about-collection">
+        <p className="eyebrow">profile.txt</p>
+        <AboutContent />
+      </section>
     </PageShell>
   );
 }

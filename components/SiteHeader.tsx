@@ -15,13 +15,13 @@ export function SiteHeader() {
   const activePath = normalizePathname(pathname);
   const router = useRouter();
   const activeLabelMap: Record<string, string> = {
-    "/about": "profile.txt",
-    "/resume": "experience.md",
-    "/works": "selected-works.md",
-    "/contact": "contact.txt",
-    "/": "profile.txt",
+    "/about": "profile",
+    "/resume": "experience",
+    "/works": "selected works",
+    "/contact": "contact",
+    "/": "profile",
   };
-  const activeLabel = activeLabelMap[activePath] ?? "profile.txt";
+  const activeLabel = activeLabelMap[activePath] ?? "profile";
 
   function handleChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextHref = event.target.value;
