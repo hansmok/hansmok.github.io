@@ -23,5 +23,5 @@ The production build is exported to `out/` for GitHub Pages.
 
 ## Deploy
 
-Pushes to `master` or `main` run `.github/workflows/deploy.yml`, build the
+Pushes to `main` run `.github/workflows/deploy.yml`, build the
 static site, and deploy the generated `out/` artifact to GitHub Pages.
