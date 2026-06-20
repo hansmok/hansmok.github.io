@@ -86,12 +86,21 @@ button {
 }
 
 .site-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
   align-items: center;
-  justify-content: space-between;
   gap: 18px;
   padding: 10px 0 18px;
   border-bottom: 1px solid var(--line);
+}
+
+.site-brandline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .site-brand {
@@ -104,6 +113,10 @@ button {
 
 .site-brand-prompt {
   color: var(--accent);
+}
+
+.site-brand-route {
+  color: var(--text);
 }
 
 .site-brand-lambda {
@@ -171,34 +184,13 @@ h1 {
   line-height: 1.75;
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.site-nav a {
-  border: 1px solid transparent;
-  padding: 8px 10px;
-  color: var(--muted);
-}
-
-.site-nav a.is-active,
-.site-nav a:hover,
-.site-nav a:focus-visible {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--text);
-  outline: none;
-}
-
 .site-nav-select {
-  display: none;
+  justify-self: end;
+  width: 100%;
 }
 
 .site-nav-select select {
-  min-width: 180px;
+  width: 100%;
   border: 1px solid var(--line);
   background: var(--panel-strong);
   color: var(--text);
@@ -223,20 +215,6 @@ h1 {
   50% {
     opacity: 0;
   }
-}
-
-.page-heading {
-  padding: 36px 0 28px;
-}
-
-.page-heading h1 {
-  font-size: clamp(2.8rem, 8vw, 6rem);
-}
-
-.page-heading > p:not(.eyebrow):last-child {
-  max-width: 720px;
-  color: var(--muted);
-  line-height: 1.6;
 }
 
 .resume-section {
@@ -425,18 +403,12 @@ h1 {
   }
 
   .site-header {
-    align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding-bottom: 14px;
   }
 
-  .site-nav {
-    display: none;
-  }
-
   .site-nav-select {
-    display: block;
-    width: 100%;
+    justify-self: stretch;
   }
 
   .site-nav-select select {
@@ -446,10 +418,6 @@ h1 {
   .content-panel,
   .resume-section {
     padding: 14px;
-  }
-
-  .page-heading {
-    padding: 28px 0 20px;
   }
 
   .education-grid,

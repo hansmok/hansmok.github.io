@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <PageShell eyebrow="resume">
+    <PageShell>
       <ResumeSection title="Experience">
         <div className="timeline">
           {experience.map((item) => (

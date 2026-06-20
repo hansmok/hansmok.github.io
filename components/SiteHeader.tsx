@@ -5,8 +5,6 @@ import type { ChangeEvent } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { profile, siteLinks } from "@/content/profile";
 
-const primaryLinks = siteLinks;
-
 function normalizePathname(pathname: string) {
   if (pathname === "/") return pathname;
   return pathname.replace(/\/$/, "");
@@ -16,6 +14,8 @@ export function SiteHeader() {
   const pathname = usePathname();
   const activePath = normalizePathname(pathname);
   const router = useRouter();
+  const activeLink = siteLinks.find((item) => item.href === activePath);
+  const activeLabel = activeLink?.label ?? "about";
 
   function handleChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextHref = event.target.value;
@@ -33,28 +33,19 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <Link className="site-brand" href="/" aria-label={`${profile.name} home`}>
-        <span className="site-brand-prompt">{profile.handle}@nyc</span>
+      <div className="site-brandline">
+        <Link className="site-brand" href="/" aria-label={`${profile.name} home`}>
+          <span className="site-brand-prompt">{profile.handle}@nyc</span>
+        </Link>
+        <span className="site-brand-route">{activeLabel}</span>
         <span className="site-brand-lambda">λ</span>
         <span className="site-brand-cursor" aria-hidden="true" />
-      </Link>
-
-      <nav className="site-nav" aria-label="Primary navigation">
-        {primaryLinks.map((item) => (
-          <Link
-            key={item.href}
-            className={activePath === item.href ? "is-active" : ""}
-            href={item.href}
-          >
-            {item.label}
-          </Link>
-        ))}
-      </nav>
+      </div>
 
       <label className="site-nav-select" aria-label="Navigate to page">
         <span className="sr-only">Navigate</span>
         <select value={activePath} onChange={handleChange}>
-          {primaryLinks.map((item) => (
+          {siteLinks.map((item) => (
             <option key={item.href} value={item.href}>
               {item.label}
             </option>
