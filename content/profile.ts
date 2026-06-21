@@ -28,6 +28,7 @@ export const siteLinks = [
   { label: "about", href: "/about", external: false },
   { label: "resume", href: "/resume", external: false },
   { label: "works", href: "/works", external: false },
+  { label: "blog", href: "https://blog.hansmok.com", external: true },
   { label: "dotfiles", href: profile.dotfiles, external: true },
   { label: "contact", href: "/contact", external: false },
 ] as const;
