@@ -13,7 +13,7 @@ export default function WorksPage() {
   return (
     <PageShell>
       <section className="resume-section works-collection">
-        <p className="eyebrow">selected-works.md</p>
+        <h1 className="eyebrow">Selected works</h1>
         <div className="works-grid">
           {works.map((work) => (
             <WorkFrame key={work.title} {...work} />

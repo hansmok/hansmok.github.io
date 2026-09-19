@@ -12,7 +12,7 @@ export default function AboutPage() {
   return (
     <PageShell>
       <section className="resume-section about-collection">
-        <p className="eyebrow">profile.txt</p>
+        <h1 className="eyebrow">About me</h1>
         <AboutContent />
       </section>
     </PageShell>

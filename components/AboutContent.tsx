@@ -12,7 +12,7 @@ export function AboutContent() {
       <div className="about-divider" aria-hidden="true" />
 
       <section>
-        <p className="eyebrow">focus.md</p>
+        <h2 className="eyebrow">Areas of interest</h2>
         <ul className="tag-list">
           {profile.interests.map((interest) => (
             <li key={interest}>{interest}</li>

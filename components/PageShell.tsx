@@ -9,7 +9,7 @@ export function PageShell({ children }: PageShellProps) {
   return (
     <main className="site-shell">
       <SiteHeader />
-      {children}
+      <div className="page-content">{children}</div>
     </main>
   );
 }

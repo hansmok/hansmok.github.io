@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <PageShell>
       <section className="resume-section contact-block">
-        <p className="eyebrow">contact.txt</p>
+        <h1 className="eyebrow">Contact</h1>
         <ContactForm />
       </section>
     </PageShell>

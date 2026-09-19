@@ -6,7 +6,7 @@ type ResumeSectionProps = {
 export function ResumeSection({ label, children }: ResumeSectionProps) {
   return (
     <section className="resume-section">
-      <p className="eyebrow">{label}</p>
+      <h2 className="eyebrow">{label}</h2>
       {children}
     </section>
   );
