@@ -9,7 +9,6 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <nav aria-label="Main navigation">
-        <p className="nav-heading">INDEX</p>
         <ul>
           {siteLinks.map((item) => (
             <li key={item.href}>
